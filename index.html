@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>b8g.app — Sovereign High-Performance Compute (b8g-production-rack)</title>
+  <meta name="description" content="Cut your server bill by 70%. Drop the self-contained b8g-production-rack onto your own Linux servers or rented bare metal. Pay $0 if we don't prove it.">
+  <link rel="stylesheet" href="./styles.css">
+  <script type="module" src="./viewer.js"></script>
+</head>
+<body>
+  <div class="bg-grid" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="b8g.app home">
+        <span class="brand-mark" aria-hidden="true">B8G</span>
+        <span class="brand-name">b8g<span class="accent-cyan">.app</span></span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="#proof">Proof</a>
+        <a href="#calculator">70/30 Calculator</a>
+        <a href="#telemetry">Pull-on-View</a>
+        <a href="#pricing">Pricing</a>
+      </nav>
+      <a class="btn btn-sm btn-primary" href="#install">Install Rack</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- Hero -->
+    <section class="hero" id="install">
+      <div class="container">
+        <div class="eyebrow-pill">
+          <span class="pulse-dot" aria-hidden="true"></span>
+          SOVEREIGN HIGH-PERFORMANCE COMPUTE &bull; LINUX x86_64 &amp; ARM64
+        </div>
+
+        <h1 class="hero-title">
+          Cut Your Server Bill by <span class="gradient-text">70%</span>.<br>
+          Pay <span class="accent-emerald">$0</span> If We Don&rsquo;t Prove It.
+        </h1>
+
+        <p class="hero-subtitle">
+          Drop the self-contained <code>b8g-production-rack</code> onto your own Linux servers or rented bare metal.
+          Local telemetry, Pull-on-View cloud dashboard, zero Docker, zero vendor lock-in.
+        </p>
+
+        <div class="install-card">
+          <div class="install-bar">
+            <span class="install-prompt" aria-hidden="true">$</span>
+            <code class="install-cmd" id="install-cmd">curl -fsSL https://b8g.app/install.sh | sh</code>
+            <button
+              type="button"
+              class="btn btn-copy"
+              data-copy="curl -fsSL https://b8g.app/install.sh | sh"
+              aria-label="Copy Linux install command"
+            >
+              Copy
+            </button>
+          </div>
+          <div class="download-row">
+            <a class="btn btn-outline" href="/releases/b8g-production-rack-linux-x64.tar.gz" download>
+              Linux x86_64 (.tar.gz)
+            </a>
+            <a class="btn btn-outline" href="/releases/b8g-production-rack-linux-arm64.tar.gz" download>
+              Linux ARM64 (.tar.gz)
+            </a>
+            <a class="btn btn-ghost" href="/releases/manifest.json">
+              SHA-256 manifest.json
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Real Measured Proof Strip -->
+    <section class="proof-section" id="proof" aria-label="Measured performance proof">
+      <div class="container">
+        <div class="proof-strip">
+          <article class="proof-item">
+            <div class="proof-value accent-cyan">93,449 req/s</div>
+            <div class="proof-label"><code>24.5 KB</code> C11 Control Plane</div>
+          </article>
+          <article class="proof-item">
+            <div class="proof-value accent-emerald">4.2 ms</div>
+            <div class="proof-label">Cold Start (<code>sectium-es</code> / <code>sectium-jvm</code>)</div>
+          </article>
+          <article class="proof-item">
+            <div class="proof-value accent-cyan">37 KB V8</div>
+            <div class="proof-label"><code>bun-neon-v8</code>, <code>dup_v8=0 B</code></div>
+          </article>
+          <article class="proof-item">
+            <div class="proof-value accent-emerald">0 Idle RAM Tax</div>
+            <div class="proof-label"><code>.b8p</code> Warm-RAM Freeze</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive 70/30 Verified Savings Calculator -->
+    <section class="section" id="calculator">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-kicker">VERIFIED GAIN-SHARE MODEL</span>
+          <h2>Interactive 70/30 Verified Savings Calculator</h2>
+          <p>
+            Model your real monthly cloud bill against a self-contained <code>b8g-production-rack</code>.
+            You keep <strong>70%</strong> of every verified dollar saved; B8G earns <strong>30%</strong> only when savings are proven.
+          </p>
+        </div>
+
+        <b8g-savings-calc
+          data-default-spend="10000"
+          data-default-stack="aws-docker-node"
+          data-default-idle="60"
+        ></b8g-savings-calc>
+      </div>
+    </section>
+
+    <!-- Interactive Pull-on-View Telemetry Viewer -->
+    <section class="section" id="telemetry">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-kicker">ZERO-STORAGE-BLOAT OBSERVABILITY</span>
+          <h2>Pull-on-View Telemetry Viewer</h2>
+          <p class="pull-model-quote">
+            &ldquo;Telemetry stays on YOUR server. We only stream while you view &mdash; or run 1 pull at cycle end for your full report.&rdquo;
+          </p>
+        </div>
+
+        <b8g-rack-viewer
+          data-endpoint="/api/rack/metrics"
+          data-report-endpoint="/api/rack/report"
+          data-export-endpoint="/api/rack/export"
+        ></b8g-rack-viewer>
+      </div>
+    </section>
+
+    <!-- Pricing & Offer Tiers -->
+    <section class="section" id="pricing">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-kicker">ALIGNED INCENTIVES</span>
+          <h2>Pricing &amp; Offer Tiers</h2>
+          <p>Start free on your own hardware. Upgrade only when verified savings speak for themselves.</p>
+        </div>
+
+        <div class="pricing-grid">
+          <article class="pricing-card">
+            <div class="tier-badge">FREE TIER</div>
+            <h3>Self-Hosted Rack</h3>
+            <div class="tier-price">$0 <span class="tier-period">/ forever</span></div>
+            <p class="tier-desc">Full sovereign runtime for your own Linux servers or bare metal.</p>
+            <ul class="tier-list">
+              <li>Self-contained Linux <code>b8g-production-rack</code></li>
+              <li>Local 256-slot ring-buffer telemetry</li>
+              <li>Free Pull-on-View Cloud Viewer</li>
+              <li>1-time Verified Savings &amp; Health Report</li>
+            </ul>
+            <a class="btn btn-outline btn-block" href="#install">Download Free Tarball</a>
+          </article>
+
+          <article class="pricing-card pricing-card-featured">
+            <div class="tier-badge tier-badge-emerald">MOST POPULAR &bull; YOU KEEP 70%</div>
+            <h3>Production Gain-Share</h3>
+            <div class="tier-price">30% <span class="tier-period">of Verified Savings</span></div>
+            <p class="tier-desc">Pay $0 if we don&rsquo;t beat your baseline. Fleet-scale reliability with zero lock-in.</p>
+            <ul class="tier-list">
+              <li><code>RollingReleaseManifest</code> zero-downtime fleet updates</li>
+              <li>Multi-rack mTLS discovery &amp; peer multiplexing</li>
+              <li>Cryptographic Ed25519 instant $O(1)$ rollback</li>
+              <li>Production SLA &amp; automated gain-share audit reports</li>
+            </ul>
+            <a class="btn btn-primary btn-block" href="#calculator">Calculate Your 70% Share</a>
+          </article>
+
+          <article class="pricing-card">
+            <div class="tier-badge tier-badge-cyan">TURNKEY CAPACITY</div>
+            <h3>On-Demand Bare Metal</h3>
+            <div class="tier-price">Pass-Through <span class="tier-period">+ Gain-Share</span></div>
+            <p class="tier-desc">No racks handy? We provision sovereign bare metal in your target region.</p>
+            <ul class="tier-list">
+              <li>Dedicated bare-metal capacity in EU / US / APAC</li>
+              <li>Stamped with your <code>b8g-production-rack</code> in seconds</li>
+              <li>Direct NVMe + 64-byte aligned <code>B8G_ARENA_V1</code></li>
+              <li>Zero hyperscaler egress traps or hypervisor tax</li>
+            </ul>
+            <a class="btn btn-outline btn-block" href="#telemetry">Inspect Live Telemetry</a>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="brand-mark" aria-hidden="true">B8G</span>
+        <span><strong>b8g.app</strong> &mdash; Sovereign High-Performance Compute for Linux</span>
+      </div>
+      <div class="footer-links">
+        <a href="/install.sh">install.sh</a>
+        <a href="/releases/manifest.json">manifest.json</a>
+        <a href="/api/rack/metrics">/api/rack/metrics</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

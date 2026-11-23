@@ -1,0 +1,333 @@
+{
+  "product": "b8g-production-rack",
+  "version": "1.0.0",
+  "generatedAt": "2026-11-23T05:43:55.868Z",
+  "targets": {
+    "linux-x64": {
+      "arch": "linux-x64",
+      "filename": "b8g-production-rack-linux-x64.tar.gz",
+      "path": "releases/b8g-production-rack-linux-x64.tar.gz",
+      "bytes": 113621,
+      "uncompressedBytes": 220160,
+      "sha256": "b2bf50d3b83ace1c23a256df0d958a209a970ec1786db3bb3f8b456d15006e1a",
+      "elfCount": 5,
+      "fileCount": 8,
+      "files": [
+        {
+          "archivePath": "bin/b8g-shim",
+          "sourcePath": "sections/b8g-native-shim/dist/b8g-shim-linux-x64",
+          "kind": "elf",
+          "mode": "0755",
+          "bytes": 38024,
+          "sha256": "b2f80df1fc17c203dfd17f86621bcd6cdc832f41a80c7779a6b53f7e5fdbf097",
+          "elfMachine": "EM_X86_64"
+        },
+        {
+          "archivePath": "bin/sectium-es",
+          "sourcePath": "sections/b8g-es/dist/sectium-es",
+          "kind": "elf",
+          "mode": "0755",
+          "bytes": 81640,
+          "sha256": "2a01789e64917cc3e61ecd8500992834cd1bd17d2b708c88a5852c45ee31f1bb",
+          "elfMachine": "EM_X86_64"
+        },
+        {
+          "archivePath": "bin/sectium-jvm",
+          "sourcePath": "sections/b8g-jvm/dist/sectium-jvm",
+          "kind": "elf",
+          "mode": "0755",
+          "bytes": 73800,
+          "sha256": "22f5d693963653f4c4a9d38515a8b53b84ad06376384396d39b729749688dbd1",
+          "elfMachine": "EM_X86_64"
+        },
+        {
+          "archivePath": "lib/libsectium_display.so",
+          "sourcePath": "sections/sectium-display/dist/libsectium_display-linux-x64.so",
+          "kind": "elf",
+          "mode": "0755",
+          "bytes": 6832,
+          "sha256": "a8d9f0d1b1f1910ee9f2d40e8a6c321ef63fba29c03065184310024064682c2c",
+          "elfMachine": "EM_X86_64"
+        },
+        {
+          "archivePath": "lib/libsectium_cp.so",
+          "sourcePath": "sections/sectium-cloud-control-plane/dist/libsectium_cp.so",
+          "kind": "elf",
+          "mode": "0755",
+          "bytes": 5080,
+          "sha256": "ac493086199d7bac18a6cadc8a0b0a41f8e966f25fba17702f7490a92f578269",
+          "elfMachine": "EM_X86_64"
+        },
+        {
+          "archivePath": "install.sh",
+          "sourcePath": "www-public-websites/b8g.app/install.sh",
+          "kind": "script",
+          "mode": "0755",
+          "bytes": 4310,
+          "sha256": "19e6e65d6da9b7b25e3f52e9e02b9f1312062ba9c9315c4dfb6c36b2216d9d16"
+        },
+        {
+          "archivePath": "lease-policy.json",
+          "sourcePath": "generated:lease-policy.json",
+          "kind": "policy",
+          "mode": "0644",
+          "bytes": 398,
+          "sha256": "88ccfb77f70c94c5134a68e5e3ff2c5f20c05fa49e80085439f29267506d53be"
+        },
+        {
+          "archivePath": "b8g-rack.json",
+          "sourcePath": "generated:b8g-rack.json",
+          "kind": "manifest",
+          "mode": "0644",
+          "bytes": 1660,
+          "sha256": "0ac963e765b20e18b2cf1cc2dd185948aeb4250b9ce693a64c8dc8af7fa002d3"
+        }
+      ]
+    },
+    "linux-arm64": {
+      "arch": "linux-arm64",
+      "filename": "b8g-production-rack-linux-arm64.tar.gz",
+      "path": "releases/b8g-production-rack-linux-arm64.tar.gz",
+      "bytes": 127663,
+      "uncompressedBytes": 232960,
+      "sha256": "03c59f74fc4a2483b31a1eb49b98263594328ca4ac4c13dd889d1c52583f2713",
+      "elfCount": 5,
+      "fileCount": 8,
+      "files": [
+        {
+          "archivePath": "bin/b8g-shim",
+          "sourcePath": "sections/b8g-native-shim/dist/b8g-shim-linux-arm64",
+          "kind": "elf",
+          "mode": "0755",
+          "bytes": 44984,
+          "sha256": "991dffff97399ec092335e4cf4130cce182d81d7dd177c15e3c404886432357e",
+          "elfMachine": "EM_AARCH64"
+        },
+        {
+          "archivePath": "bin/sectium-es",
+          "sourcePath": "sections/b8g-es/dist/sectium-es-linux-arm64",
+          "kind": "elf",
+          "mode": "0755",
+          "bytes": 86720,
+          "sha256": "846b7d0126e033933053cb175370d3ea436e1761f7ff20b1903c4a64c2a522e0",
+          "elfMachine": "EM_AARCH64"
+        },
+        {
+          "archivePath": "bin/sectium-jvm",
+          "sourcePath": "sections/b8g-jvm/dist/sectium-jvm-linux-arm64",
+          "kind": "elf",
+          "mode": "0755",
+          "bytes": 75880,
+          "sha256": "36409a12ae2bce7fd9c05b95b34ca22de5763afd688748a7b9271a7020fcc66c",
+          "elfMachine": "EM_AARCH64"
+        },
+        {
+          "archivePath": "lib/libsectium_display.so",
+          "sourcePath": "sections/sectium-display/dist/libsectium_display-linux-arm64.so",
+          "kind": "elf",
+          "mode": "0755",
+          "bytes": 6192,
+          "sha256": "c537cd38158758ad1d2ef3ce4a223bf988c212fa83fcebd56b183b0e1fa69738",
+          "elfMachine": "EM_AARCH64"
+        },
+        {
+          "archivePath": "lib/libsectium_cp.so",
+          "sourcePath": "sections/sectium-cloud-control-plane/dist/libsectium_cp-linux-arm64.so",
+          "kind": "elf",
+          "mode": "0755",
+          "bytes": 4480,
+          "sha256": "26a5369f2eb0575fb60631627630a697605ad17c2490f2b244ac9c212d25ed36",
+          "elfMachine": "EM_AARCH64"
+        },
+        {
+          "archivePath": "install.sh",
+          "sourcePath": "www-public-websites/b8g.app/install.sh",
+          "kind": "script",
+          "mode": "0755",
+          "bytes": 4310,
+          "sha256": "19e6e65d6da9b7b25e3f52e9e02b9f1312062ba9c9315c4dfb6c36b2216d9d16"
+        },
+        {
+          "archivePath": "lease-policy.json",
+          "sourcePath": "generated:lease-policy.json",
+          "kind": "policy",
+          "mode": "0644",
+          "bytes": 398,
+          "sha256": "88ccfb77f70c94c5134a68e5e3ff2c5f20c05fa49e80085439f29267506d53be"
+        },
+        {
+          "archivePath": "b8g-rack.json",
+          "sourcePath": "generated:b8g-rack.json",
+          "kind": "manifest",
+          "mode": "0644",
+          "bytes": 1663,
+          "sha256": "d3ab3be6d6b1d30ec9bd9a26dcc2c71a9a49d435e5d63fe4fbb55905f2f48ad5"
+        }
+      ]
+    }
+  },
+  "bundles": [
+    {
+      "arch": "linux-x64",
+      "filename": "b8g-production-rack-linux-x64.tar.gz",
+      "path": "releases/b8g-production-rack-linux-x64.tar.gz",
+      "bytes": 113621,
+      "uncompressedBytes": 220160,
+      "sha256": "b2bf50d3b83ace1c23a256df0d958a209a970ec1786db3bb3f8b456d15006e1a",
+      "elfCount": 5,
+      "fileCount": 8,
+      "files": [
+        {
+          "archivePath": "bin/b8g-shim",
+          "sourcePath": "sections/b8g-native-shim/dist/b8g-shim-linux-x64",
+          "kind": "elf",
+          "mode": "0755",
+          "bytes": 38024,
+          "sha256": "b2f80df1fc17c203dfd17f86621bcd6cdc832f41a80c7779a6b53f7e5fdbf097",
+          "elfMachine": "EM_X86_64"
+        },
+        {
+          "archivePath": "bin/sectium-es",
+          "sourcePath": "sections/b8g-es/dist/sectium-es",
+          "kind": "elf",
+          "mode": "0755",
+          "bytes": 81640,
+          "sha256": "2a01789e64917cc3e61ecd8500992834cd1bd17d2b708c88a5852c45ee31f1bb",
+          "elfMachine": "EM_X86_64"
+        },
+        {
+          "archivePath": "bin/sectium-jvm",
+          "sourcePath": "sections/b8g-jvm/dist/sectium-jvm",
+          "kind": "elf",
+          "mode": "0755",
+          "bytes": 73800,
+          "sha256": "22f5d693963653f4c4a9d38515a8b53b84ad06376384396d39b729749688dbd1",
+          "elfMachine": "EM_X86_64"
+        },
+        {
+          "archivePath": "lib/libsectium_display.so",
+          "sourcePath": "sections/sectium-display/dist/libsectium_display-linux-x64.so",
+          "kind": "elf",
+          "mode": "0755",
+          "bytes": 6832,
+          "sha256": "a8d9f0d1b1f1910ee9f2d40e8a6c321ef63fba29c03065184310024064682c2c",
+          "elfMachine": "EM_X86_64"
+        },
+        {
+          "archivePath": "lib/libsectium_cp.so",
+          "sourcePath": "sections/sectium-cloud-control-plane/dist/libsectium_cp.so",
+          "kind": "elf",
+          "mode": "0755",
+          "bytes": 5080,
+          "sha256": "ac493086199d7bac18a6cadc8a0b0a41f8e966f25fba17702f7490a92f578269",
+          "elfMachine": "EM_X86_64"
+        },
+        {
+          "archivePath": "install.sh",
+          "sourcePath": "www-public-websites/b8g.app/install.sh",
+          "kind": "script",
+          "mode": "0755",
+          "bytes": 4310,
+          "sha256": "19e6e65d6da9b7b25e3f52e9e02b9f1312062ba9c9315c4dfb6c36b2216d9d16"
+        },
+        {
+          "archivePath": "lease-policy.json",
+          "sourcePath": "generated:lease-policy.json",
+          "kind": "policy",
+          "mode": "0644",
+          "bytes": 398,
+          "sha256": "88ccfb77f70c94c5134a68e5e3ff2c5f20c05fa49e80085439f29267506d53be"
+        },
+        {
+          "archivePath": "b8g-rack.json",
+          "sourcePath": "generated:b8g-rack.json",
+          "kind": "manifest",
+          "mode": "0644",
+          "bytes": 1660,
+          "sha256": "0ac963e765b20e18b2cf1cc2dd185948aeb4250b9ce693a64c8dc8af7fa002d3"
+        }
+      ]
+    },
+    {
+      "arch": "linux-arm64",
+      "filename": "b8g-production-rack-linux-arm64.tar.gz",
+      "path": "releases/b8g-production-rack-linux-arm64.tar.gz",
+      "bytes": 127663,
+      "uncompressedBytes": 232960,
+      "sha256": "03c59f74fc4a2483b31a1eb49b98263594328ca4ac4c13dd889d1c52583f2713",
+      "elfCount": 5,
+      "fileCount": 8,
+      "files": [
+        {
+          "archivePath": "bin/b8g-shim",
+          "sourcePath": "sections/b8g-native-shim/dist/b8g-shim-linux-arm64",
+          "kind": "elf",
+          "mode": "0755",
+          "bytes": 44984,
+          "sha256": "991dffff97399ec092335e4cf4130cce182d81d7dd177c15e3c404886432357e",
+          "elfMachine": "EM_AARCH64"
+        },
+        {
+          "archivePath": "bin/sectium-es",
+          "sourcePath": "sections/b8g-es/dist/sectium-es-linux-arm64",
+          "kind": "elf",
+          "mode": "0755",
+          "bytes": 86720,
+          "sha256": "846b7d0126e033933053cb175370d3ea436e1761f7ff20b1903c4a64c2a522e0",
+          "elfMachine": "EM_AARCH64"
+        },
+        {
+          "archivePath": "bin/sectium-jvm",
+          "sourcePath": "sections/b8g-jvm/dist/sectium-jvm-linux-arm64",
+          "kind": "elf",
+          "mode": "0755",
+          "bytes": 75880,
+          "sha256": "36409a12ae2bce7fd9c05b95b34ca22de5763afd688748a7b9271a7020fcc66c",
+          "elfMachine": "EM_AARCH64"
+        },
+        {
+          "archivePath": "lib/libsectium_display.so",
+          "sourcePath": "sections/sectium-display/dist/libsectium_display-linux-arm64.so",
+          "kind": "elf",
+          "mode": "0755",
+          "bytes": 6192,
+          "sha256": "c537cd38158758ad1d2ef3ce4a223bf988c212fa83fcebd56b183b0e1fa69738",
+          "elfMachine": "EM_AARCH64"
+        },
+        {
+          "archivePath": "lib/libsectium_cp.so",
+          "sourcePath": "sections/sectium-cloud-control-plane/dist/libsectium_cp-linux-arm64.so",
+          "kind": "elf",
+          "mode": "0755",
+          "bytes": 4480,
+          "sha256": "26a5369f2eb0575fb60631627630a697605ad17c2490f2b244ac9c212d25ed36",
+          "elfMachine": "EM_AARCH64"
+        },
+        {
+          "archivePath": "install.sh",
+          "sourcePath": "www-public-websites/b8g.app/install.sh",
+          "kind": "script",
+          "mode": "0755",
+          "bytes": 4310,
+          "sha256": "19e6e65d6da9b7b25e3f52e9e02b9f1312062ba9c9315c4dfb6c36b2216d9d16"
+        },
+        {
+          "archivePath": "lease-policy.json",
+          "sourcePath": "generated:lease-policy.json",
+          "kind": "policy",
+          "mode": "0644",
+          "bytes": 398,
+          "sha256": "88ccfb77f70c94c5134a68e5e3ff2c5f20c05fa49e80085439f29267506d53be"
+        },
+        {
+          "archivePath": "b8g-rack.json",
+          "sourcePath": "generated:b8g-rack.json",
+          "kind": "manifest",
+          "mode": "0644",
+          "bytes": 1663,
+          "sha256": "d3ab3be6d6b1d30ec9bd9a26dcc2c71a9a49d435e5d63fe4fbb55905f2f48ad5"
+        }
+      ]
+    }
+  ]
+}

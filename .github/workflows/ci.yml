@@ -1,0 +1,12 @@
+name: b8g-production-rack CI
+on: [push, pull_request, workflow_dispatch]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Verify Self-Contained Linux Rack Server, Bundles, 30-Day Lease & Export API
+        run: node --test b8g-app.test.mts
