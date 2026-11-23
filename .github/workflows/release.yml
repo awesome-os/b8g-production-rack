@@ -1,0 +1,37 @@
+name: Release — Multi-OS (Win64 + Linux x64/ARM64) Production Rack
+on:
+  push:
+    tags: ['v*']
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Release tag (e.g. v0.3.0)'
+        required: true
+        default: 'v0.3.0'
+
+permissions:
+  contents: write
+
+jobs:
+  pack-and-release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Verify Rack Server, 30-Day Lease & Export API
+        run: node --test b8g-app.test.mts
+      - name: Assemble Windows x64 Zip from Upstream CAS + Publish Multi-OS Release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TAG: ${{ github.event.inputs.tag || github.ref_name }}
+        run: |
+          mkdir -p dist-win64
+          cp install.ps1 dist-win64/
+          curl -fsSL https://github.com/awesome-os/holo-compiler/releases/download/v0.2.0/b8g-shim.exe -o dist-win64/b8g-shim.exe
+          curl -fsSL https://github.com/awesome-os/sectium-display/releases/download/v0.2.0/libsectium_display.dll -o dist-win64/libsectium_display.dll
+          curl -fsSL https://github.com/awesome-os/b8g-micro-moe/releases/download/v0.2.0/algebra-router.b8p -o dist-win64/algebra-router.b8p
+          (cd dist-win64 && zip -r ../releases/b8g-production-rack-win64.zip .)
+          sha256sum releases/*.tar.gz releases/*.zip install.sh install.ps1 releases/manifest.json > releases/SHA256SUMS.txt
+          gh release create "$TAG" releases/b8g-production-rack-win64.zip releases/b8g-production-rack-linux-x64.tar.gz releases/b8g-production-rack-linux-arm64.tar.gz releases/manifest.json releases/SHA256SUMS.txt install.sh install.ps1 --title "b8g-production-rack $TAG (Win64 + Linux x64/ARM64)" --notes "Assembled and verified automatically by GitHub Actions runner." || gh release upload "$TAG" releases/b8g-production-rack-win64.zip releases/b8g-production-rack-linux-x64.tar.gz releases/b8g-production-rack-linux-arm64.tar.gz releases/manifest.json releases/SHA256SUMS.txt install.sh install.ps1 --clobber
