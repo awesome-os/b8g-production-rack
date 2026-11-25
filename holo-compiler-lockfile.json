@@ -1,0 +1,98 @@
+{
+  "schema": "holo-compiler-lockfile-v1",
+  "abiMagic": "0x33564742",
+  "casLayout": "v11",
+  "repo": "awesome-os/b8g-production-rack",
+  "targets": [
+    "linux-arm64",
+    "linux-x64",
+    "win64"
+  ],
+  "generatedAt": "2026-11-24T23:53:02.473Z",
+  "dependencies": [
+    {
+      "id": "awesome-os/b8g-production-rack/b8g-production-rack-linux-arm64.tar.gz",
+      "kind": "object",
+      "version": "v0.3.0",
+      "target": "linux-arm64",
+      "sha512": "ca8d3ada3e170cd8ad129589e94f68bdd3758b413d37a4dbe3dc2ef9ba7f58d47c2b089d1aa992ed5c9091f180d3dce7f14d5c12770330d4708cb17336ade644",
+      "size": 127663,
+      "executable": false,
+      "blob": "v11/files/ca/ca8d3ada3e170cd8ad129589e94f68bdd3758b413d37a4dbe3dc2ef9ba7f58d47c2b089d1aa992ed5c9091f180d3dce7f14d5c12770330d4708cb17336ade644",
+      "url": "https://github.com/awesome-os/b8g-production-rack/releases/download/v0.3.0/b8g-production-rack-linux-arm64.tar.gz",
+      "dependencies": []
+    },
+    {
+      "id": "awesome-os/b8g-production-rack/b8g-production-rack-linux-x64.tar.gz",
+      "kind": "object",
+      "version": "v0.3.0",
+      "target": "linux-x64",
+      "sha512": "d9f6c57dbe720f1b67a9aa8befbb557c05620f1606a82427bc859028436c93de8925623cb4372bed5042f33f0cf668359c1462a0af5784fe714ec22c4dfdbcc1",
+      "size": 113621,
+      "executable": false,
+      "blob": "v11/files/d9/d9f6c57dbe720f1b67a9aa8befbb557c05620f1606a82427bc859028436c93de8925623cb4372bed5042f33f0cf668359c1462a0af5784fe714ec22c4dfdbcc1",
+      "url": "https://github.com/awesome-os/b8g-production-rack/releases/download/v0.3.0/b8g-production-rack-linux-x64.tar.gz",
+      "dependencies": []
+    },
+    {
+      "id": "awesome-os/b8g-production-rack/b8g-production-rack-win64.zip",
+      "kind": "object",
+      "version": "v0.3.0",
+      "target": "win64",
+      "sha512": "6316c071dae269fd2818bcde63b0de37f63d74ccd6f73c338dcb6be8b3412435efad336f926c7c724cd8ff42d576b8b3da6ebe969e4e4a0816d7a1f323919a75",
+      "size": 50110,
+      "executable": false,
+      "blob": "v11/files/63/6316c071dae269fd2818bcde63b0de37f63d74ccd6f73c338dcb6be8b3412435efad336f926c7c724cd8ff42d576b8b3da6ebe969e4e4a0816d7a1f323919a75",
+      "url": "https://github.com/awesome-os/b8g-production-rack/releases/download/v0.3.0/b8g-production-rack-win64.zip",
+      "dependencies": []
+    },
+    {
+      "id": "awesome-os/b8g-production-rack/install.ps1",
+      "kind": "object",
+      "version": "v0.3.0",
+      "target": "win64",
+      "sha512": "7257931e781af711bbc0f029bb7e5e19e8aa2e7eaa9f8fcf0a8ec2cadee7dd02bc654b419132548253b5259dcdef9172a3fbb31f8ebe787b896f0f8f6713bea7",
+      "size": 1313,
+      "executable": false,
+      "blob": "v11/files/72/7257931e781af711bbc0f029bb7e5e19e8aa2e7eaa9f8fcf0a8ec2cadee7dd02bc654b419132548253b5259dcdef9172a3fbb31f8ebe787b896f0f8f6713bea7",
+      "url": "https://github.com/awesome-os/b8g-production-rack/releases/download/v0.3.0/install.ps1",
+      "dependencies": []
+    },
+    {
+      "id": "awesome-os/b8g-production-rack/install.sh",
+      "kind": "object",
+      "version": "v0.3.0",
+      "target": "any",
+      "sha512": "63a522963e5b7acade9593b439f30d7e30db9a38475433d8f46eb7d5e1cf44f23d120cb258ad5c7aa9b395ec2e2fde43e2e965c70f9b0aaf1df059a5f7229869",
+      "size": 4310,
+      "executable": true,
+      "blob": "v11/files/63/63a522963e5b7acade9593b439f30d7e30db9a38475433d8f46eb7d5e1cf44f23d120cb258ad5c7aa9b395ec2e2fde43e2e965c70f9b0aaf1df059a5f7229869-exec",
+      "url": "https://github.com/awesome-os/b8g-production-rack/releases/download/v0.3.0/install.sh",
+      "dependencies": []
+    },
+    {
+      "id": "awesome-os/b8g-production-rack/manifest.json",
+      "kind": "object",
+      "version": "v0.3.0",
+      "target": "any",
+      "sha512": "14d0723a1895ea7665185096e3a073e6b3df4fd0c7bde58f2a29d2ff23687f1627d3d38f0babaa558e88a2bb6639c67d3e7a089fb2e2e6f01a1c50d6749529d5",
+      "size": 12038,
+      "executable": false,
+      "blob": "v11/files/14/14d0723a1895ea7665185096e3a073e6b3df4fd0c7bde58f2a29d2ff23687f1627d3d38f0babaa558e88a2bb6639c67d3e7a089fb2e2e6f01a1c50d6749529d5",
+      "url": "https://github.com/awesome-os/b8g-production-rack/releases/download/v0.3.0/manifest.json",
+      "dependencies": []
+    },
+    {
+      "id": "awesome-os/b8g-production-rack/SHA256SUMS.txt",
+      "kind": "object",
+      "version": "v0.3.0",
+      "target": "any",
+      "sha512": "6fc927db5118c017be35b15a15147f75366a72650b0dae228d35cdc73112a1c4eddfbabcf832cba719940d59204775d531edcf14c40a7950e553946f008c93e4",
+      "size": 575,
+      "executable": false,
+      "blob": "v11/files/6f/6fc927db5118c017be35b15a15147f75366a72650b0dae228d35cdc73112a1c4eddfbabcf832cba719940d59204775d531edcf14c40a7950e553946f008c93e4",
+      "url": "https://github.com/awesome-os/b8g-production-rack/releases/download/v0.3.0/SHA256SUMS.txt",
+      "dependencies": []
+    }
+  ]
+}
