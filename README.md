@@ -15,3 +15,13 @@ node server.mts
 
 ## License
 MIT
+
+## Quick Install & Run (Windows / Linux / macOS)
+
+```sh
+# Install / hydrate from v11 CAS via holo-pm
+holo-pm install repository://github.com/awesome-os/b8g-production-rack@main
+
+# Or project & run directly via holo-project (0-byte hardlink)
+holo-project "project://cpp/b8g-production-rack?from=repository://github.com/awesome-os/b8g-production-rack@main"
+```
