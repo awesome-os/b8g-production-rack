@@ -1,3 +1,5 @@
+> [!NOTE] Consolidated into the unified Holo v11 OS monorepo at https://github.com/awesome-os/awesome-os
+
 # b8g-production-rack
 
 A **113.6 KB** self-contained Linux (`x86_64` & `ARM64`) high-performance compute runtime for your own servers or rented bare metal — keep **70%** of your verified server-bill savings.
